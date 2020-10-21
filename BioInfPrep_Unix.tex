@@ -299,7 +299,7 @@ Exercise/  Documents/  Desktop/
             \begin{itemize}[<.->]
                 \item \alert{\texttt{ls -l}} show details
                 \item \alert{\texttt{ls -lh}} human readable file sizes
-                \item \alert{\texttt{ls -l}} show hidden files and folders
+                \item \alert{\texttt{ls -a}} show hidden files and folders
             \end{itemize}
         \item \command{cd} \textbf{- change directory} 
 
@@ -343,7 +343,7 @@ Exercise/  Documents/  Desktop/
 
             Remove files and folders. \textcolor{red}{\textbf{Removing cannot be undone!}}
             \begin{itemize}[<.->]
-                \item \command{cp -r} - recursive mode
+                \item \command{rm -r} - recursive mode
 
                     Required to remove directories with their contents.
             \end{itemize}
@@ -721,7 +721,7 @@ total 13960
                     Remove read permissions for the rest of the world
                 \item Shortcuts:
 
-                    (o)wner, (g)roup, (o)thers, (a)ll at once
+                    (u)ser, (g)roup, (o)thers, (a)ll at once
 
                     (r)ead, (w)rite, e(x)ecute
             \end{itemize}
@@ -795,7 +795,7 @@ total 13960
 
             Downloads a remote file. Supports HTTP(S) and FTP.
             \begin{itemize}[<.->]
-                \item \command{wget -c} or \command{wget -{-}background}
+                \item \command{wget -c} or \command{wget -{-}continue}
 
                     Continue downloading a file that was already partially downloaded
             \end{itemize}
@@ -986,14 +986,14 @@ large.fasta          my_diff_2.txt  my_sort_2.txt  test_file_1.txt  tmp.txt
     \begin{itemize}[<+->]\setlength\itemsep{1em}
         \item \command{tar tzf <path>}
 
-            Shows the contents of a gziped tar file
+            Shows the contents of a gzipped tar file
         \item \command{tar xvzf <path>}
 
-            Unpacks the contents of a gziped tar file. \textcolor{red}{\textbf{Overwrites existing
+            Unpacks the contents of a gzipped tar file. \textcolor{red}{\textbf{Overwrites existing
             output file paths!}}
         \item \command{tar cvzf <outputpath> <contentpath> [<contentpath> ...]}
 
-            Add content to a zip file recursively. \textcolor{red}{\textbf{Overwrites an existing
+            Add content to a gzipped tar file recursively. \textcolor{red}{\textbf{Overwrites an existing
             output zip file if it exists.}}
 
     \end{itemize}
@@ -1185,7 +1185,7 @@ material/large.fasta
         \item \command{du} and \command{ls} may report different sizes
             \begin{shells}{\linewidth}
                 \begin{shellout}
-(*$\mathdollar$*) du -h material.zi (*$\dlsh$*)p
+(*$\mathdollar$*) du -h material.zip (*$\dlsh$*)
                 \end{shellout}
                 \begin{shellout}[stdout]
 12K	material.zip
@@ -1365,7 +1365,7 @@ material/large.fasta
                 \item \command{grep -n <pattern> <path> [<path> ...]}
 
                     Print the line numbers along with the matches
-                \item \command{grep --color <pattern> <path> [<path> ...]}
+                \item \command{grep -{-}color <pattern> <path> [<path> ...]}
 
                     Highlight the pattern occurrence
             \end{itemize}
