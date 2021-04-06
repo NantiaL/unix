@@ -29,8 +29,8 @@
 
 \title{Bioinformatics Preparatory Course}
 \subtitle{Basic Unix}
-\author{Léon Kuchenbecker and Sam Wein}
-\date{October 21, 2020}
+\author{Léon Kuchenbecker and Nantia Leonidou}
+\date{April 7, 2021}
 
 \newcommand\sepsym{\raisebox{.1em}{\tiny$\blacksquare$} }
 \newcommand\curtitle{}
@@ -562,9 +562,9 @@ ls: cannot access 'doesnt.exist': No such file or directory
         \item \command{2> <path>} redirects the \alert{standard error} into \command{<path>}
         \item \command{> <path>} is short for \command{1> <path>}
     \end{itemize}
-    \pause
-
-    Try the two examples above and check the contents of the two output files each time!
+    \visible<+->{
+        Try the two examples above and check the contents of the two output files each time!
+    }
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1496,6 +1496,12 @@ COMMAND [OPTIONAL SWITCHES] [INPUT PATH]
 (*$\mathdollar$*) gunzip -c material.tar.gz | tar t (*$\dlsh$*) 
         \end{shellout}
     \end{shells}
+\end{frame}
+
+\begin{frame}{Final Task}
+    \begin{center}\Large
+        \url{https://bioinfprep.github.io/task/unix1.html}
+    \end{center}
 \end{frame}
 
 \end{document}
